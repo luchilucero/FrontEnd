@@ -1,0 +1,66 @@
+<div class="row">
+
+    <h1>Hard & Soft skills</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-light" routerLink="/nuevaskill" *ngIf="isLogged">
+            Nueva skill
+        </button>
+    </div>
+    <br>
+
+    <div class="text-center col-sm-4 col-md-4 col-lg-4" *ngFor="let skill of skill">
+        <circle-progress
+        [percent]="(skill.porcentaje)"
+        [maxPercent]="100"
+        [toFixed]="0"
+        [showTitle]="true"
+        [showUnits]="false"
+        [showSubtitle]="false"
+        [showBackground]="false"
+        [showInnerStroke]="true"
+        [clockwise]="false"
+        [responsive]="false"
+        [startFromZero]="false"
+        [showZeroOuterStroke]="true"
+        [radius]="60"
+        [backgroundPadding]="5"
+        [backgroundGradient]="false"
+        [backgroundOpacity]="1"
+        [backgroundColor]="'transparent'"
+        [backgroundGradientStopColor]="'transparent'"
+        [backgroundStroke]="'transparent'"
+        [outerStrokeColor]="'blueviolet'"
+        [innerStrokeColor]="'black'"
+        [titleColor]="'#fefefe'"
+        [unitsColor]="'#444444'"
+        [outerStrokeWidth]="10"
+        [space]="-10"
+        [innerStrokeWidth]="10"
+        [backgroundStrokeWidth]="0"
+        [outerStrokeLinecap]="'round'"
+        [title]="(skill.nombre)"
+        [titleFontSize]="'20'"
+        [unitsFontSize]="'10'"
+        [titleFontWeight]="'normal'"
+        [unitsFontWeight]="'normal'"
+        [subtitleFontWeight]="'normal'"
+        [showImage]="false"
+        [imageHeight]="0"
+        [imageWidth]="0"
+        [animation]="true"
+        [animateTitle]="false"
+        [lazy]="true"
+        [animationDuration]="1000"
+
+        ></circle-progress>
+
+        <button class="btn btn-light" routerLink="/editskill/{{skill.id}}" *ngIf="isLogged">
+            <i class="bi bi-pen"></i>Editar
+        </button>
+
+        <button class="btn btn-danger" (click)="delete(skill.id)" *ngIf="isLogged">
+            <i class="bi bi-trash"></i>Borrar
+        </button>
+
+    </div>
+</div>

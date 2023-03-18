@@ -1,0 +1,12 @@
+.row{
+    background-color: black;
+}
+
+footer{
+    color: white;
+    font-family: "montserrat";
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}

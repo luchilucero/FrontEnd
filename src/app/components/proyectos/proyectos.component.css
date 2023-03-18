@@ -1,0 +1,46 @@
+.row{
+    padding: 20px;
+    background-color: black;
+    font-family: "montserrat";
+    color: white;
+}
+
+.titulo{
+    font-family: "agenor";
+    color: blueviolet;
+    font-size: 2rem;
+    padding-left: 50px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    letter-spacing: 5px;
+}
+
+.contenedor h1{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.uno{
+    height: 400px;
+    text-align: justify;
+    padding-top: 10%;
+    padding-left: 10%;
+    background: url(../../../assets/fondo-escritorio-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.dos{
+    height: 400px;
+    text-align: justify;
+    margin-top: 5%;
+    padding-top: 10%;
+    padding-left: 10%;
+    background: url(../../../assets/fondo-escritorio-2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}

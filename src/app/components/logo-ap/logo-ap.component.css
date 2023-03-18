@@ -1,0 +1,58 @@
+.row{
+    padding: 20px;
+}
+
+#logoap{
+    width: 150px;
+    vertical-align: middle;
+}
+
+#instagram, #linkedin, #github{
+    width: 35px;
+    vertical-align: middle;
+}
+
+.boton{
+    display: inline;
+}
+
+.boton a{
+    text-decoration: none;
+    display: inline;
+    padding: 10px 15px;
+    border: 2px solid blueviolet;
+    border-radius: 50px;
+    color: white;
+    font-family: 'montserrat';
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: .5s;
+    font-size: 0.9 rem;
+    margin-left: 70px;
+}
+
+.boton a:hover{
+    box-shadow: 5px 5px 10px blueviolet, -5px -5px 10px blueviolet;
+}
+
+.social img{
+    margin: 0.5em;
+    display: inline-flex;
+}
+
+.social{
+    padding-left: 300px;
+    padding-top: 10px;
+}
+
+@media (max-width:575px) {
+    #logoap{
+        margin-left: 37%;
+        align-items: center;
+    }
+    .social{
+        align-items: center;
+        padding-left: 110px;
+    }
+    
+}

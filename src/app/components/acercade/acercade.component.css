@@ -1,0 +1,51 @@
+.row{
+    padding: 20px;
+}
+
+div{
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-family: "montserrat";
+}
+
+h1{
+    font-family: "agenor";
+    color: blueviolet;
+    font-size: 2rem;
+    letter-spacing: 5px;
+}
+
+@media (min-width: 576px){
+    #foto-perfil{
+        position: absolute;
+        width: 15%;
+        border-radius: 100%;
+        left: 6%;
+        top: 500px;
+    }
+}
+
+@media (max-width: 575px){
+    #foto-perfil{
+        position: absolute;
+        width: 25%;
+        border-radius: 100%;
+        left: 38%;
+        top: 60%;
+    }
+}
+
+#nombre{
+    margin-top: 70px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: blueviolet;
+    letter-spacing: 2px;
+}
+
+.acerca-de p{
+    text-align: justify;
+    display: inline-block;
+    padding-right: 2.5%;
+}

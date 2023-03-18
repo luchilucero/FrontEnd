@@ -1,0 +1,14 @@
+@font-face {
+    font-family:"agenor";
+    src: url(../src/assets/agenor-bold.ttf);
+}
+
+@font-face {
+    font-family:"montserrat";
+    src: url(../src/assets/Montserrat-Regular.ttf);
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
