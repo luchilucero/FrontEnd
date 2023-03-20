@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { persona } from 'src/app/model/persona.model';
+import { ImageService } from 'src/app/service/image.service';
 import { PersonaService } from 'src/app/service/persona.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { PersonaService } from 'src/app/service/persona.service';
 export class EditAcercaDeComponent {
   persona: persona = null;
   constructor(private personaService: PersonaService, private activatedRouter: ActivatedRoute,
-    private router: Router){ }
+    private router: Router, public imageService: ImageService){ }
 
   ngOnInit(){
     const id = this.activatedRouter.snapshot.params['id'];
@@ -19,7 +20,7 @@ export class EditAcercaDeComponent {
       data =>{
         this.persona = data;
       }, err =>{
-        alert("Error al modificar experiencia");
+        alert("Error al modificar persona");
         this.router.navigate(['']);
       }
     )
@@ -38,7 +39,7 @@ export class EditAcercaDeComponent {
   }
 
   uploadImage($event:any){
-
+    this.imageService.uploadImage($event)
   }
 
 }

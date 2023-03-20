@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { persona } from '../model/persona.model';
 
 @Injectable({
@@ -9,7 +10,7 @@ import { persona } from '../model/persona.model';
 
 export class PersonaService {
 
-  perURL = 'http://localhost:8080/personas/';
+  perURL = 'https://backend-llf.onrender.com/personas/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -22,7 +23,7 @@ export class PersonaService {
   } 
 /*
   public save(educacion: Educacion): Observable<any>{
-    return this.httpClient.post<any>(this.eduURL + 'create', educacion);
+    return this.httpClient.post<any>(this.perURL + 'create', educacion);
   }
 */
   public update(id: number, Persona: persona): Observable<any>{
@@ -30,7 +31,7 @@ export class PersonaService {
   }
 /*
   public delete(id: number): Observable<any>{
-    return this.httpClient.delete<any>(this.eduURL + `delete/${id}`);
+    return this.httpClient.delete<any>(this.perURL + `delete/${id}`);
   }
 */
 }
