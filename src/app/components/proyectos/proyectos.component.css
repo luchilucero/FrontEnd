@@ -18,13 +18,14 @@
 .contenedor h1{
     font-size: 1.5rem;
     font-weight: bolder;
+    width: 100%;
 }
 
 .uno{
     height: 400px;
+    width: 100;
     text-align: justify;
-    padding-top: 10%;
-    padding-left: 10%;
+    padding: 10%;
     background: url(../../../assets/fondo-escritorio-1.jpg);
     background-size: cover;
     background-position: center;
@@ -34,10 +35,9 @@
 
 .dos{
     height: 400px;
+    width: 100%;
     text-align: justify;
-    margin-top: 5%;
-    padding-top: 10%;
-    padding-left: 10%;
+    padding: 10%;
     background: url(../../../assets/fondo-escritorio-2.jpg);
     background-size: cover;
     background-position: center;

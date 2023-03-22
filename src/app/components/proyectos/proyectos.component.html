@@ -1,17 +1,23 @@
 <div class="row">
     <h1 class="titulo">PROYECTOS</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-light" routerLink="/nuevoproyecto" *ngIf="isLogged">
+            Nuevo proyecto
+        </button>
+        <br>
+    </div>
     <div class="contenedor">
-        <div class="uno">
-            <h1>Titulo 1</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus vitae provident dolor, 
-            aut non aliquid vero qui ducimus voluptate error aperiam et quam fuga tenetur consequatur omnis 
-            incidunt beatae asperiores!</p>
-        </div>
-        <div class="dos">
-            <h1>Titulo 2</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus vitae provident dolor, 
-            aut non aliquid vero qui ducimus voluptate error aperiam et quam fuga tenetur consequatur omnis 
-            incidunt beatae asperiores!</p>
+        <div class="uno" *ngFor="let proyecto of proy" >
+                <h1>{{proyecto.nombre}}</h1>
+                <p>{{proyecto.descripcion}}</p>
+
+                <button class="btn btn-light" routerLink="/editproyecto/{{proyecto.id}}" *ngIf="isLogged">
+                    <i class="bi bi-pen"></i>Editar
+                </button>
+
+                <button class="btn btn-danger" (click)="delete(proyecto.id)" *ngIf="isLogged">
+                    <i class="bi bi-trash"></i>Borrar
+                </button>
         </div>
     </div>
 </div>
